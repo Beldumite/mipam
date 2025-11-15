@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--        <ImageView-->
+<!--            android:id="@+id/checkmarks"-->
+<!--            android:layout_width="125sp"-->
+<!--            android:layout_height="125dp"-->
+<!--            android:src="@drawable/checkmark"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            android:foregroundGravity="center"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            android:layout_margin="60dp"/>-->
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationSuccess"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:lottie_rawRes="@raw/checkmarks"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="60dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false" />
+
+        <TextView
+            android:id="@+id/successtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account Created Succesfully!"
+            app:layout_constraintTop_toBottomOf="@id/animationSuccess"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/gray_900"
+            android:layout_marginTop="20dp"
+            android:textSize="30sp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/continueButton"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="40sp"
+            android:textSize="20dp"
+            android:text="Continue"
+            android:backgroundTint="#6AB0D6"
+            app:layout_constraintTop_toBottomOf="@id/successtext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

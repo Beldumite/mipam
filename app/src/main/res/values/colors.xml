@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Core neutrals -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray_50">#FFFAFAFA</color>
+    <color name="gray_100">#FFF5F5F5</color>
+    <color name="gray_200">#FFEEEEEE</color>
+    <color name="gray_300">#FFE0E0E0</color>
+    <color name="gray_400">#FFBDBDBD</color>
+    <color name="gray_500">#FF9E9E9E</color>
+    <color name="gray_600">#FF757575</color>
+    <color name="gray_700">#FF616161</color>
+    <color name="gray_800">#FF424242</color>
+    <color name="gray_900">#FF212121</color>
+
+    <!-- Primary palette (blue example, replace if needed) -->
+    <color name="primary">#FF2962FF</color>
+    <color name="primary_dark">#FF0039CB</color>
+    <color name="primary_light">#FF768FFF</color>
+    <color name="on_primary">#FFFFFFFF</color>
+
+    <!-- Secondary palette -->
+    <color name="secondary">#FFFF6D00</color>
+    <color name="secondary_dark">#FFC43C00</color>
+    <color name="secondary_light">#FFFF9E40</color>
+    <color name="on_secondary">#FF000000</color>
+
+    <!-- Error colors (Material style) -->
+    <color name="error">#FFB00020</color>
+    <color name="on_error">#FFFFFFFF</color>
+
+    <!-- Background & surface -->
+    <color name="background">#FFFFFFFF</color>
+    <color name="on_background">#FF000000</color>
+    <color name="surface">#FFFFFFFF</color>
+    <color name="on_surface">#FF000000</color>
+
+    <!-- Shadows / overlays -->
+    <color name="shadow_8">#14000000</color>
+    <color name="shadow_16">#29000000</color>
+    <color name="shadow_32">#42000000</color>
+</resources>
