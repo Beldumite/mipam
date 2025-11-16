@@ -36,6 +36,7 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
 }
 
 dependencies {
@@ -51,4 +52,5 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation("com.airbnb.android:lottie:6.7.1")
+    implementation("androidx.cardview:cardview:1.0.0")
 }

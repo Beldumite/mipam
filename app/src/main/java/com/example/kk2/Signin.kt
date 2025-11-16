@@ -4,7 +4,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import kotlin.math.sign
 
 class Signin : AppCompatActivity() {
@@ -14,12 +16,21 @@ class Signin : AppCompatActivity() {
 
         val signInButton = findViewById<Button>(R.id.buttonSignIn)
         val signUpText = findViewById<TextView>(R.id.transitionSignUp)
-
+        val emailInput = findViewById<EditText>(R.id.email)
+        val passwordInput = findViewById<EditText>(R.id.password)
         signUpText.setOnClickListener {
             navigateToSignUp()
         }
         signInButton.setOnClickListener {
-            navigateToSuccess()
+            val email = emailInput.text.toString()
+            val password = passwordInput.text.toString()
+
+
+            if(email.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "Please Fill all the field", Toast.LENGTH_SHORT).show()
+            } else {
+                navigateToSuccess()
+            }
         }
 
     }

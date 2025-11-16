@@ -43,4 +43,8 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+
+    <string name="status">Searching for data. . .</string>
+    <string name="address">Jl. Budi Utomo No. 7</string>
+    <string name="placeholder">Placeholder</string>
 </resources>

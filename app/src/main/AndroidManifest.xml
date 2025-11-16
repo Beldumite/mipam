@@ -24,6 +24,7 @@
         <activity android:name=".Success"></activity>
         <activity android:name=".Signin"></activity>
         <activity android:name=".Signup"></activity>
+        <activity android:name=".Home"></activity>
     </application>
 
 </manifest>
