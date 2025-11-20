@@ -1,15 +1,269 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content"
+    android:background="@drawable/app_background"
+    android:minHeight="1000dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Profile Header Section -->
+    <LinearLayout
+        android:id="@+id/profileHeader"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="This is the Profile page"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Profile Image -->
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/megazeraora"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle_background"
+            android:clipToOutline="true"/>
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beldumite"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="12dp"/>
+
+        <!-- Email and Phone -->
+        <TextView
+            android:id="@+id/userContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JxxxDxx@gmail.com | 084xxxxxxxx"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/profilesetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/profileHeader">
+
+        <!-- Personal Info -->
+        <LinearLayout
+            android:id="@+id/btnPersonalInfo"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@drawable/button_background"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/whiteavatar"
+                app:tint="@android:color/white"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Personal Info"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_marginStart="12dp"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/dropdownwhite"
+                app:tint="@android:color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnContactInfo"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/whiteavatar"
+                app:tint="@android:color/white"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Contact Information"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_marginStart="12dp"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/dropdownwhite"
+                app:tint="@android:color/white"/>
+
+        </LinearLayout>
+
+        <!-- Shared Access -->
+        <LinearLayout
+            android:id="@+id/btnSharedAccess"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@drawable/button_background"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/whiteshare"
+                app:tint="@android:color/white"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Shared Access"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_marginStart="12dp"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/dropdownwhite"
+                app:tint="@android:color/white"/>
+
+        </LinearLayout>
+
+        <!-- Account Security -->
+        <LinearLayout
+            android:id="@+id/btnAccountSecurity"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/shield"
+                app:tint="@android:color/white"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Account Security"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_marginStart="12dp"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/dropdownwhite"
+                app:tint="@android:color/white"/>
+
+        </LinearLayout>
+
+        <!-- Change Account -->
+        <LinearLayout
+            android:id="@+id/btnChangeAccount"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@drawable/button_background"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/changeaccount"
+                app:tint="@android:color/white"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Change Account"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_marginStart="12dp"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/dropdownwhite"
+                app:tint="@android:color/white"/>
+
+        </LinearLayout>
+
+        <!-- Log Out -->
+        <LinearLayout
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/logout"
+                app:tint="#FF5252"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Log out"
+                android:textColor="#FF5252"
+                android:textSize="16sp"
+                android:layout_marginStart="12dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

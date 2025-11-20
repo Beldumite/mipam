@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import android.widget.Button
 import android.widget.EditText
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import kotlin.math.sign
@@ -14,7 +15,7 @@ class Signin : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signin)
 
-        val signInButton = findViewById<Button>(R.id.buttonSignIn)
+        val signInButton = findViewById<LinearLayout>(R.id.buttonSignIn)
         val signUpText = findViewById<TextView>(R.id.transitionSignUp)
         val emailInput = findViewById<EditText>(R.id.email)
         val passwordInput = findViewById<EditText>(R.id.password)

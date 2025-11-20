@@ -9,6 +9,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.widget.Toast
 import android.view.ViewAnimationUtils
+import android.widget.LinearLayout
 import com.example.kk2.AppNavigator
 
 class Signup : AppCompatActivity() {
@@ -16,7 +17,7 @@ class Signup : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
 
-        val signUpButton = findViewById<Button>(R.id.buttonSignUp)
+        val signUpButton = findViewById<LinearLayout>(R.id.buttonSignUp)
         val signInText = findViewById<TextView>(R.id.transitionSignIn)
         val emailInput = findViewById<EditText>(R.id.email)
         val usernameInput = findViewById<EditText>(R.id.username)
