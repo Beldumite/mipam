@@ -19,7 +19,7 @@ class Signin : AppCompatActivity() {
         val emailInput = findViewById<EditText>(R.id.email)
         val passwordInput = findViewById<EditText>(R.id.password)
         signUpText.setOnClickListener {
-            navigateToSignUp()
+            AppNavigator.navigateToSignUp(this)
         }
         signInButton.setOnClickListener {
             val email = emailInput.text.toString()
@@ -29,20 +29,10 @@ class Signin : AppCompatActivity() {
             if(email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Please Fill all the field", Toast.LENGTH_SHORT).show()
             } else {
-                navigateToSuccess()
+                AppNavigator.navigateToSuccess(this)
             }
         }
 
     }
 
-    private fun navigateToSignUp() {
-        val intent = Intent(this, Signup::class.java)
-        startActivity(intent)
-        finish()
-    }
-    private fun navigateToSuccess() {
-        val intent = Intent(this, Success::class.java)
-        startActivity(intent)
-        finish()
-    }
 }

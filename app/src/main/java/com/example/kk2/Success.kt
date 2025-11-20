@@ -13,13 +13,9 @@ class Success : AppCompatActivity() {
         val continueButton = findViewById<Button>(R.id.continueButton)
 
         continueButton.setOnClickListener {
-            navigateToHome()
+            AppNavigator.navigateToHome(this)
         }
     }
 
-    private fun navigateToHome() {
-        val intent = Intent(this, Home::class.java)
-        startActivity(intent)
-        finish()
-    }
+
 }

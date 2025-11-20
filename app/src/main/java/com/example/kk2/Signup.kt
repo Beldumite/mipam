@@ -8,6 +8,9 @@ import android.widget.EditText
 import android.content.Intent
 import android.content.SharedPreferences
 import android.widget.Toast
+import android.view.ViewAnimationUtils
+import com.example.kk2.AppNavigator
+
 class Signup : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,8 +23,9 @@ class Signup : AppCompatActivity() {
         val passwordInput = findViewById<EditText>(R.id.password)
 
 
+
         signInText.setOnClickListener {
-            navigateToSignIn()
+            AppNavigator.navigateToSignIn(this)
         }
         signUpButton.setOnClickListener {
             val email = emailInput.text.toString()
@@ -32,18 +36,8 @@ class Signup : AppCompatActivity() {
                 Toast.makeText(this, "Please Fill all the field", Toast.LENGTH_SHORT).show()
             }
 
-            navigateToSuccess()
+            AppNavigator.navigateToSuccess(this)
         }
 
-    }
-    private fun navigateToSignIn() {
-        val intent = Intent(this, Signin::class.java)
-        startActivity(intent)
-        finish()
-    }
-    private fun navigateToSuccess() {
-        val intent = Intent(this, Success::class.java)
-        startActivity(intent)
-        finish()
     }
 }

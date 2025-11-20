@@ -26,18 +26,8 @@ class MainActivity : AppCompatActivity() {
         loadingani.playAnimation()
 
         Handler(Looper.getMainLooper()).postDelayed({
-            navigateToSignUp()
+            AppNavigator.navigateToSignUp(this  )
         }, 1500)
     }
-    private fun navigateToSignUp() {
-        val intent = Intent(this, Signup::class.java)
-        startActivity(intent)
-        finish()
-    }
 
-    private fun navigateToSuccess() {
-        val intent = Intent(this, Success::class.java)
-        startActivity(intent)
-        finish()
-    }
 }
