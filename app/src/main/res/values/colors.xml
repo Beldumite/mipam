@@ -36,6 +36,7 @@
     <color name="on_secondary">#FF000000</color>
 
     <color name="greendark">#023020</color>
+    <color name="lightgreen">#4CCB5D</color>
     <color name="red">#F44336</color>
 
     <!-- Error colors (Material style) -->
