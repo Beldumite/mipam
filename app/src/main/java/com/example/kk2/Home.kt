@@ -11,6 +11,7 @@ import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.airbnb.lottie.LottieAnimationView
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
@@ -48,7 +49,6 @@ class Home : AppCompatActivity() {
             AppNavigator.loadFragment(this, ProfileFragment())
             AppNavigator.updateNavIcons(this, R.id.profileImage)
         }
-
 
     }
 }

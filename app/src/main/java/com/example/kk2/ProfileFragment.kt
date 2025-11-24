@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import android.widget.LinearLayout
 
 class ProfileFragment : Fragment(){
     override fun onCreateView(
@@ -14,4 +15,15 @@ class ProfileFragment : Fragment(){
     ): View? {
         return inflater.inflate(R.layout.fragment_profile, container, false  )
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Use view.findViewById()
+        view.findViewById<LinearLayout>(R.id.btnLogout).setOnClickListener {
+            AppNavigator.navigateToSignIn(requireActivity())
+        }
+    }
+
+
 }
